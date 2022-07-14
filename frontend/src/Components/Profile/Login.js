@@ -2,8 +2,8 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Signup from "./Signup";
-import "../Css/login.css";
+import Header from "../Header";
+import logc from "../Css/login.module.css";
 
 function Login() {
   const [data, setData] = useState({ email: "", password: "" });
@@ -32,50 +32,48 @@ function Login() {
   };
 
   return (
-    <div className="login_container">
-      <div className="login_form_container">
-        <div className="left">
-          <form className="form_container" onSubmit={handleSubmit}>
-            <h1>Login to Your Account</h1>
-            <input
-              type="email"
-              placeholder="Email"
-              name="email"
-              onChange={handleChange}
-              value={data.email}
-              required
-              className="input"
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              name="password"
-              onChange={handleChange}
-              value={data.password}
-              required
-              className="input"
-            />
-            {error && <div className="error_msg">{error}</div>}
-            <button type="submit" className="green_btn">
-              Log In
-            </button>
-          </form>
-        </div>
-        <div className="right">
-          <h1>New Here ?</h1>
-          <Link to="../profile/signup">
-            <button
-              type="button"
-              className="white_btn"
-
-              // onClick={Signup}
-            >
-              Sign Up
-            </button>
-          </Link>
+    <React.Fragment>
+      <Header />
+      <div className={logc.login_container}>
+        <div className={logc.login_form_container}>
+          <div className={logc.left}>
+            <form className={logc.form_container} onSubmit={handleSubmit}>
+              <h1>Login to Your Account</h1>
+              <input
+                type="email"
+                placeholder="Email"
+                name="email"
+                onChange={handleChange}
+                value={data.email}
+                required
+                className={logc.input}
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                name="password"
+                onChange={handleChange}
+                value={data.password}
+                required
+                className={logc.input}
+              />
+              {error && <div className={logc.error_msg}>{error}</div>}
+              <button type="submit" className={logc.green_btn}>
+                Sign In
+              </button>
+            </form>
+          </div>
+          <div className={logc.right}>
+            <h1>New Here ?</h1>
+            <Link to="../profile/signup" target={"_self"}>
+              <button type="button" className={logc.white_btn}>
+                Sign Up
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 }
 

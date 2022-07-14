@@ -1,3 +1,6 @@
+/* .rd{
+    background-color: rgb(146, 234, 14) !important;
+} */
 .login_container {
     width: 100%;
     min-height: 100vh;
@@ -13,7 +16,7 @@
     display: flex;
     border-radius: 10px;
     box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
-        0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
+        0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%) ;
 }
 
 .left {
@@ -22,7 +25,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: white ;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
@@ -44,7 +47,7 @@
     width: 370px;
     padding: 15px;
     border-radius: 10px;
-    background-color: #edf5f3;
+    background-color: #edf5f3 ;
     margin: 5px 0;
     font-size: 14px;
 }
@@ -54,8 +57,8 @@
     padding: 15px;
     margin: 5px 0;
     font-size: 14px;
-    background-color: #f34646;
-    color: white;
+    background-color: #f34646 ;
+    color: white ;
     border-radius: 5px;
     text-align: center;
 }
@@ -66,15 +69,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: #3bb19b; */
-    background-color: #272727;
+    background-color: #3bb19b;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
 .right h1 {
     margin-top: 0;
-    color: white;
+    color: white ;
     font-size: 40px;
     align-self: center;
 }
@@ -84,7 +86,7 @@
     border: none;
     outline: none;
     padding: 12px 0;
-    background-color: white;
+    background-color: white ;
     border-radius: 20px;
     width: 180px;
     font-weight: bold;
@@ -93,8 +95,7 @@
 }
 
 .green_btn {
-    /* background-color: #3bb19b; */
-    background-color: #252525;
-    color: white;
+    background-color: #3bb19b ;
+    color: white ;
     margin: 10px;
 }

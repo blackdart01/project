@@ -20,23 +20,25 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // } from "@fortawesome/fontawesome-svg-core/import.macro";
 // import { faUser } from "@fortawesome/free-regular-svg-icons";
 
-function Header() {
+function Header(props) {
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="home">ScholarBuddy</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/">
+            ScholarBuddy
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto"></Nav>
             <Nav>
-              <Nav.Link as={Link} to="home" className="active">
+              <Nav.Link as={Link} to="../" className="active">
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="contact">
+              <Nav.Link as={Link} to="../contact" className={props.cName}>
                 Contact
               </Nav.Link>
-              <Nav.Link as={Link} to="dashboard">
+              <Nav.Link as={Link} to="../prof" className={props.cName}>
                 Dashboard
               </Nav.Link>
 
@@ -75,14 +77,26 @@ function Header() {
                 }
                 id="navbarScrollingDropdown"
               >
-                <NavDropdown.Item as={Link} to="profile/login" target="_self">
+                <NavDropdown.Item
+                  as={Link}
+                  to="../profile/login"
+                  target="_self"
+                >
                   Log In
                 </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="profile/signup" target="_self">
+                <NavDropdown.Item
+                  as={Link}
+                  to="../profile/signup"
+                  target="_self"
+                >
                   Sign Up
                 </NavDropdown.Item>
                 {/* <NavDropdown.Divider /> */}
-                <NavDropdown.Item as={Link} to="profile/logout" target="_blank">
+                <NavDropdown.Item
+                  as={Link}
+                  to="../profile/logout"
+                  target="_blank"
+                >
                   Log Out
                 </NavDropdown.Item>
               </NavDropdown>

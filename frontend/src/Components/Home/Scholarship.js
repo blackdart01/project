@@ -15,10 +15,16 @@ function Scholarship() {
   // };
   return (
     <div>
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "18rem", border: "1px solid #dadada" }}>
         {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
         <Card.Body>
-          <Card.Title>SA's Ameer wala Scholarship</Card.Title>
+          <Card.Title
+            style={{
+              textAlign: "center",
+            }}
+          >
+            AICTE Scholarship
+          </Card.Title>
           <hr style={{ height: "2px" }} />
           <div style={objFlex}>
             <div
@@ -31,7 +37,7 @@ function Scholarship() {
               <Card.Subtitle style={{ display: "block", margin: "0 auto" }}>
                 Award
               </Card.Subtitle>
-              <Card.Text>150 rs dega</Card.Text>
+              <Card.Text>Score Based</Card.Text>
             </div>
             {/* <div style={lineObj}></div> */}
             <div
@@ -42,11 +48,22 @@ function Scholarship() {
               }}
             >
               <Card.Subtitle>Eligibility</Card.Subtitle>
-              <Card.Text>Shadi ki umar honi chahiye</Card.Text>
+              <Card.Text>BE/B.Tech</Card.Text>
             </div>
           </div>
           <br />
-          <Button variant="primary">View Scholarship</Button>
+          <Button
+            variant="primary"
+            style={{
+              backgroundColor: "#3bb19b",
+              border: "none",
+              display: "block",
+              // width: "100%",
+              margin: "auto",
+            }}
+          >
+            View Scholarship
+          </Button>
         </Card.Body>
         <Card.Footer className="text-muted">2 days ago</Card.Footer>
       </Card>

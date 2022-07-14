@@ -1,0 +1,21 @@
+:root{
+    --bs-success-rgb:#3bb19b;
+    --bs-bg-opacity:1;
+}
+.hov:hover{
+    background-color: #3bb19b;
+    color:white;
+    transition: 50ms ease-in-out;
+    color:#dadada
+}
+/* .ProgressBar{
+    background-color: #3bb19b !important;
+    color: red !important;
+} */
+/* .bg-success {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important;
+} */
+/* .cardImg{
+    width: 25% !important;
+} */

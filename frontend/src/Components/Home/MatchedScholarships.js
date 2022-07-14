@@ -1,25 +1,20 @@
 import React from "react";
 import Scholarship from "./Scholarship";
-
-function Scholarships() {
+const MatchedScholarships = () => {
   const obj = {
-    margin: "75px 50px",
+    margin: "0 20px",
     display: "grid",
-    gridTemplateColumns: "1fr 1fr 1fr 1fr",
+    gridTemplateColumns: "1fr 1fr 1fr",
+    marginLeft: "auto",
+    marginRight: "auto",
     justifyItems: "center",
-    gap: "50px 0px",
+    gap: "50px",
+    paddingLeft: "25px",
+    justifyContent: "space-between",
+    borderLeft: "1px solid #dadada",
   };
   return (
-    <div style={obj}>
-      <Scholarship />
-      <Scholarship />
-      <Scholarship />
-      <Scholarship />
-      <Scholarship />
-      <Scholarship />
-      <Scholarship />
-      <Scholarship />
-      <Scholarship />
+    <div style={{ obj }}>
       <Scholarship />
       <Scholarship />
       <Scholarship />
@@ -35,6 +30,6 @@ function Scholarships() {
       <Scholarship />
     </div>
   );
-}
+};
 
-export default Scholarships;
+export default MatchedScholarships;
